@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Game/Scripts/EditorTools/EditorWindows/BehaviourTree/BehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=0249827bc38f11946a826e47bfa0bd4c&amp;type=3#BehaviourTreeEditor" />
+    <uie:Toolbar>
+        <uie:ToolbarMenu tabindex="-1" display-tooltip-when-elided="true" text="Assets" name="AssetsMenu" />
+    </uie:Toolbar>
+    <SplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="LeftPanel">
+            <SplitView orientation="Vertical" fixed-pane-initial-dimension="250">
+                <ui:VisualElement name="inspector-container">
+                    <ui:Label tabindex="-1" text="Inspector" display-tooltip-when-elided="true" name="Label" />
+                    <InspectorView />
+                </ui:VisualElement>
+                <ui:VisualElement name="blackboard-container">
+                    <ui:Label tabindex="-1" text="BlackBoard" display-tooltip-when-elided="true" name="Label" />
+                    <ui:IMGUIContainer />
+                </ui:VisualElement>
+            </SplitView>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightPanel">
+            <BehaviourTreeView focusable="true" style="flex-grow: 1;">
+                <ui:Label tabindex="-1" text="Tree view&#10;" display-tooltip-when-elided="true" />
+                <ui:VisualElement picking-mode="Ignore" style="height: 5873px; justify-content: flex-end; align-items: flex-start;">
+                    <ui:VisualElement name="DescriptionBox" picking-mode="Ignore" style="min-width: 277px; max-width: 0; max-height: 0; min-height: 100px; background-color: rgba(24, 18, 18, 0.8); align-items: stretch; justify-content: flex-start; flex-direction: column; margin-bottom: 0; top: auto; -unity-text-align: middle-left; margin-top: 0; padding-bottom: 0; height: auto;">
+                        <ui:Label tabindex="-1" text="NodeName" display-tooltip-when-elided="true" name="NodeName" picking-mode="Ignore" style="justify-content: flex-start; align-items: center; -unity-text-align: lower-left; -unity-font-style: bold; font-size: 14px;" />
+                        <ui:Label tabindex="-1" text="No description given" display-tooltip-when-elided="true" name="TaskDescription" picking-mode="Ignore" style="top: auto; -unity-text-align: upper-left; white-space: normal; font-size: 10px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </BehaviourTreeView>
+        </ui:VisualElement>
+    </SplitView>
+</ui:UXML>
